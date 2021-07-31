@@ -54,6 +54,7 @@ class Item(Resource):
 
         if item is None:
             item = ItemModel(name, **data)
+            # return {'message': 'Item does not exist'}
         else:
             item.price = data['price']
 
